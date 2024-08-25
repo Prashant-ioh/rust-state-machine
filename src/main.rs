@@ -5,6 +5,3 @@ fn main() {
 }
 
 
-fn FARRA() {
-    println!("Hello, world!");
-}
