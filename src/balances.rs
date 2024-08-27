@@ -40,3 +40,4 @@ mod tests {
 	assert_eq!(balances.balance(&"bob".to_string()), 0);
 	}
 }
+
