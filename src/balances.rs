@@ -44,6 +44,19 @@ mod tests {
 }
 
 #[cfg(test)]
+
+mod tests{
+	#[test]
+	fn init_balances(){
+		let mut balances = super::Pallet::new();
+		assert_eq(balances.balance(&"alice".to_string()), 100);
+		balances.set_balance(&"alice".to_string(), 1000);
+		
+	}
+	
+}
+
+#[cfg(test)]
 mod tests {
 	#[test]
 	fn init_balances() {
@@ -55,14 +68,17 @@ mod tests {
 	assert_eq!(balances.balance(&"bob".to_string()), 0);
 
 
-	fn init_balances()
-	{
-		let mut bakances = super::Pallet::new();
-		assert_eq!(balance.balance(&"alice".to_string(), 0));
-		balances.set_balance(&"alice".to_string(), 100);
-		assert_eq!(balances.balance(&"alice".to_string()), 100);
-		assert_eq(balances.balance(&"bob".to_string()), 0);
-	}
-	}
+	// fn init_balances()
+	// {
+	// 	let mut bakances = super::Pallet::new();
+	// 	assert_eq!(balance.balance(&"alice".to_string(), 0));
+	// 	balances.set_balance(&"alice".to_string(), 100);
+	// 	assert_eq!(balances.balance(&"alice".to_string()), 100);
+	// 	assert_eq(balances.balance(&"bob".to_string()), 0);
+	// }
+	// }
 }
+
+
+
 
