@@ -51,7 +51,9 @@ mod tests{
 		let mut balances = super::Pallet::new();
 		assert_eq(balances.balance(&"alice".to_string()), 100);
 		balances.set_balance(&"alice".to_string(), 1000);
-		
+		assert_eq(balances.balance(&"alice".to_string()), 200);
+		assert_eq(balances.balance(&"bob".to_string()), 300);
+
 	}
 	
 }
