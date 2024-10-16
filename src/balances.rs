@@ -11,4 +11,10 @@ impl Pallet {
 			balances: BTreeMap::new()
 		}
 	}
+
+	pub fn set_balance(&mut self, who: &String, amount: u128) {
+		self.balances.insert(who.clone(), amount);
+	}
+
+
 }
