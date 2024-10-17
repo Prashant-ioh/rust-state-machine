@@ -2,6 +2,11 @@ use std::collections::BTreeMap;
 
 
 
+let mut map = BTreeMap::new();
+map.insert("alice", 100);
+assert_eq!(map.get(&"alice"), Some(&100));
+assert_eq!(map.get(&"bob"), None);
+
 pub struct Pallet{
 	balances: BTreeMap<String, u128>,
 	
