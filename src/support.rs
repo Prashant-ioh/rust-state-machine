@@ -6,7 +6,7 @@ pub struct Block<Header, Extrinsic> {
 	pub extrinsics: Vec<Extrinsic>,
 }
 
- We are using an extremely simplified header which only contains the current block number.
+// We are using an extremely simplified header which only contains the current block number.
 // On a real blockchain, you would expect to also find:
 /// - parent block hash
 /// - state root
