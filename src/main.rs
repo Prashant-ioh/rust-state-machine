@@ -41,9 +41,9 @@ impl system::Config for Runtime {
 	type Nonce = types::Nonce;
 }
 
-// impl balances::Config for Runtime {
-// 	type Balance = types::Balance;
-// }
+impl balances::Config for Runtime {
+	type Balance = types::Balance;
+}
 
 impl proof_of_existence::Config for Runtime {
 	type Content = types::Content;
