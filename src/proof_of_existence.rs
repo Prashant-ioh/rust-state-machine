@@ -31,13 +31,13 @@ impl<T: Config> Pallet<T> {
 
 	
 	
-	pub fn create_claim(&mut self, caller: T::AccountId, claim: T::Content) -> DispatchResult {
-		if self.claims.contains_key(&claim) {
-			return Err(&"this content is already claimed");
-		}
-		self.claims.insert(claim, caller);
-		Ok(())
-	}
+	// pub fn create_claim(&mut self, caller: T::AccountId, claim: T::Content) -> DispatchResult {
+	// 	if self.claims.contains_key(&claim) {
+	// 		return Err(&"this content is already claimed");
+	// 	}
+	// 	self.claims.insert(claim, caller);
+	// 	Ok(())
+	// }
 
 	
 	// pub fn revoke_claim(&mut self, caller: T::AccountId, claim: T::Content) -> DispatchResult {
