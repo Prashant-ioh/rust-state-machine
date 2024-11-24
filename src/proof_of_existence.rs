@@ -31,23 +31,23 @@ impl<T: Config> Pallet<T> {
 
 	
 	
-	pub fn create_claim(&mut self, caller: T::AccountId, claim: T::Content) -> DispatchResult {
-		if self.claims.contains_key(&claim) {
-			return Err(&"this content is already claimed");
-		}
-		self.claims.insert(claim, caller);
-		Ok(())
-	}
+	// pub fn create_claim(&mut self, caller: T::AccountId, claim: T::Content) -> DispatchResult {
+	// 	if self.claims.contains_key(&claim) {
+	// 		return Err(&"this content is already claimed");
+	// 	}
+	// 	self.claims.insert(claim, caller);
+	// 	Ok(())
+	// }
 
 	
-	pub fn revoke_claim(&mut self, caller: T::AccountId, claim: T::Content) -> DispatchResult {
-		let owner = self.get_claim(&claim).ok_or("claim does not exist")?;
-		if caller != *owner {
-			return Err(&"this content is owned by someone else");
-		}
-		self.claims.remove(&claim);
-		Ok(())
-	}
+	// pub fn revoke_claim(&mut self, caller: T::AccountId, claim: T::Content) -> DispatchResult {
+	// 	let owner = self.get_claim(&claim).ok_or("claim does not exist")?;
+	// 	if caller != *owner {
+	// 		return Err(&"this content is owned by someone else");
+	// 	}
+	// 	self.claims.remove(&claim);
+	// 	Ok(())
+	// }
 }
 
 
